@@ -1,12 +1,9 @@
-import java.awt.BorderLayout;
-
-import javax.swing.JButton;
-import javax.swing.JComponent;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
 
 public class MyApp extends JFrame {
+	
+	private static final long serialVersionUID = 1L;
+
 	public MyApp() {
 		setSize(750, 750);
 		setTitle("Lob Pong");

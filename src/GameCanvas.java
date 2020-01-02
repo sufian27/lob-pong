@@ -11,10 +11,15 @@ import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 import javax.swing.JComponent;
-import javax.swing.JLabel;
 import javax.swing.Timer;
 
 public class GameCanvas extends JComponent implements KeyListener {
+	/**
+	 *
+	 */
+	private static final long serialVersionUID = 1L;
+
+	
 	protected Timer timer1;
 	protected int rectX, rectY, velocityX = 40, velocityY = 30, ballSize = 20, rectWidth = 100, rectHeight = 30, lives = 3, score = 0, actualTime = 0,
 			gameTime = 0, levelTime = 10, level = 1, highScore = HighScore.read(), adjustToMiddle = 100;
@@ -218,7 +223,6 @@ public class GameCanvas extends JComponent implements KeyListener {
 	
 	public void endGame() {
 		//everything is initialized when lives end
-		Graphics g = getGraphics();
 		if (score > highScore) { //if current score is more than current highscore, then the highscore is set to current score
 			highScore = score;
 			HighScore.write(highScore);
